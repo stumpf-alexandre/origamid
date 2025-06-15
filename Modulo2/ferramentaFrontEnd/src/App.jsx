@@ -4,8 +4,10 @@ const App = () => {
   const nome = 'Origamid';
   const num = Math.random();
   const ativo = true;
+  const titulo = <h1>Este é um titulo</h1>;
   return (
     <>
+      {titulo}
       <h1>{nome}</h1>
       <a
         className="link"
