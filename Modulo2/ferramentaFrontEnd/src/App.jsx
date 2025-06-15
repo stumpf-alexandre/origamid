@@ -16,6 +16,12 @@ const App = () => {
     modelo: 'Ka',
     ano: 2020,
   }
+  //estyle
+  const estiloH1 = {
+    color: 'blue',
+    fontSize: '20px',
+    fontFamily: 'Helvetica',
+  }
   return (
     <>
       {titulo}
@@ -49,6 +55,8 @@ const App = () => {
       Não posso passar apenas o objeto
       <p>{carro}</p>
       */}
+      <h1 style={estiloH1}>Estilo em linha</h1>
+      <p style={{color:'green', fontSize: '20px' }}>Outro jeito de passar estilo</p>
     </>
   );
 };
