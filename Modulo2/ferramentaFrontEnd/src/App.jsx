@@ -34,6 +34,7 @@ const App = () => {
       {/*Passando um valor como expressão, usando uma expressão ternaria*/}
       <p className={ativo ? 'ativo' : 'inativo'}>{(num * 100) / 39}</p>
       {mostrarNome('Stumpf')}
+      <p>{new Date().getDate()}</p>
     </>
   );
 };
