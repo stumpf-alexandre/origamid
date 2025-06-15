@@ -5,6 +5,10 @@ const App = () => {
   const num = Math.random();
   const ativo = true;
   const titulo = <h1>Este é um titulo</h1>;
+
+  function mostrarNome(sobrenome) {
+    return "Alexandre " + sobrenome;
+  } 
   return (
     <>
       {titulo}
@@ -29,6 +33,7 @@ const App = () => {
       <p>{(num * 1000) / 50}</p>
       {/*Passando um valor como expressão, usando uma expressão ternaria*/}
       <p className={ativo ? 'ativo' : 'inativo'}>{(num * 100) / 39}</p>
+      {mostrarNome('Stumpf')}
     </>
   );
 };
