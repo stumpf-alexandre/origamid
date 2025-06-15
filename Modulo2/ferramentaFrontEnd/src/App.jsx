@@ -8,7 +8,14 @@ const App = () => {
 
   function mostrarNome(sobrenome) {
     return "Alexandre " + sobrenome;
-  } 
+  }
+
+  //objeto
+  const carro = {
+    marca: 'Ford',
+    modelo: 'Ka',
+    ano: 2020,
+  }
   return (
     <>
       {titulo}
@@ -35,6 +42,13 @@ const App = () => {
       <p className={ativo ? 'ativo' : 'inativo'}>{(num * 100) / 39}</p>
       {mostrarNome('Stumpf')}
       <p>{new Date().getDate()}</p>
+      <p>{carro.marca}</p>
+      <p>{carro.modelo}</p>
+      <p>{carro.ano}</p>
+      {/*
+      Não posso passar apenas o objeto
+      <p>{carro}</p>
+      */}
     </>
   );
 };
