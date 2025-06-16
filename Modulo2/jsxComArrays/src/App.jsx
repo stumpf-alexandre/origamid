@@ -1,8 +1,14 @@
 import React from 'react';
 
 const App = () => {
-  const produtos = ['Notebook, ', 'Smartphone, ', 'Tablet, '];
-  return <p>{produtos}</p>;
+  const filmes = ['Before Sunrise', 'Before Sunset', 'Before Midnight'];
+  return (
+    <ul>
+      {filmes.map((filme, index) => (
+        <li key={filme}>{index} {filme}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default App;
