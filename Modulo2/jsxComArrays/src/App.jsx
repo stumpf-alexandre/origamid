@@ -1,7 +1,7 @@
 import React from 'react';
 
 const App = () => {
-  const produtos = ['Notebook', 'Smartphone', 'Tablet'];
+  const produtos = ['Notebook, ', 'Smartphone, ', 'Tablet, '];
   return <p>{produtos}</p>;
 };
 
