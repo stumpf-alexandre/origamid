@@ -64,6 +64,8 @@ const App = () => {
   };
 
   const dados = luana; // ou mario
+  const dadosLuana = luana;
+  const dadosMario = mario;
 
   const total = dados.compras
     .map((item) => Number(item.preco.replace('R$ ', '')))
@@ -117,6 +119,38 @@ const App = () => {
         </p>
         <p>Total: R$ {total}</p>
         <p>{total > 10000 && 'Você está gastando muito'}</p>
+      </div>
+
+      <br />
+      <div>
+        <p>Nome: {dadosLuana.cliente}</p>
+        <p>Idade: {dadosLuana.idade}</p>
+        <p>
+          Situação:{' '}
+          <span style={{ color: dadosLuana.ativa ? 'green' : 'red' }}>
+            {dadosLuana.ativa ? 'Ativa' : 'Inativa'}
+          </span>
+        </p>
+        <p>Total: R$ {dadosLuana.compras.map((item) => Number(item.preco.replace('R$ ', '')))
+    .reduce((a, b) => a + b)}</p>
+        <p>{dadosLuana.compras.map((item) => Number(item.preco.replace('R$ ', '')))
+    .reduce((a, b) => a + b) > 10000 && 'Você está gastando muito'}</p>
+      </div>
+
+      <br />
+      <div>
+        <p>Nome: {dadosMario.cliente}</p>
+        <p>Idade: {dadosMario.idade}</p>
+        <p>
+          Situação:{' '}
+          <span style={{ color: dadosMario.ativa ? 'green' : 'red' }}>
+            {dadosMario.ativa ? 'Ativa' : 'Inativa'}
+          </span>
+        </p>
+        <p>Total: R$ {dadosMario.compras.map((item) => Number(item.preco.replace('R$ ', '')))
+    .reduce((a, b) => a + b)}</p>
+        <p>{dadosMario.compras.map((item) => Number(item.preco.replace('R$ ', '')))
+    .reduce((a, b) => a + b) > 10000 && 'Você está gastando muito'}</p>
       </div>
     </>
   );
