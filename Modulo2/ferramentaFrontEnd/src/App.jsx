@@ -63,7 +63,7 @@ const App = () => {
     fontFamily: 'Helvetica',
   };
 
-  const dados = mario; // ou mario
+  const dados = luana; // ou mario
 
   const total = dados.compras
     .map((item) => Number(item.preco.replace('R$ ', '')))
