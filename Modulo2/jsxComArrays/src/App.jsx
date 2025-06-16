@@ -1,7 +1,8 @@
 import React from 'react';
 
 const App = () => {
-  return <div>App React</div>;
+  const produtos = ['Notebook', 'Smartphone', 'Tablet'];
+  return <p>{produtos}</p>;
 };
 
 export default App;
