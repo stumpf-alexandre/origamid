@@ -5,8 +5,8 @@ Cria um ambiente de desenvolvimento já configurado e orimizado para a criação
   [https://vitejs.dev/](https://vitejs.dev/)
 Na pasta que deseja instalar:
 - npm create vite@latest .
-- npm install
 - Seguir o prompt > React > JavaScript
+- npm install
 - Eliminamos todo o codigo que não é essencial, deixando uma extrutura minima
 - Estrutura Mínima
 Abaixo os arquivos essenciais.
@@ -50,6 +50,12 @@ Código mínimo para o App.jsx
   };
 
   export default App;
+
+Adicionar os scripts de desenvolvimento e build ao package.json, trocando pelo que esta no package.json.
+"scripts": {
+  "start": "esbuild --bundle src/main.jsx --outfile=main.js --servedir=./ --watch",
+  "build": "esbuild --bundle src/main.jsx --outfile=main.js"
+},
 
 Comandos
 Inicia o desenvolvimento

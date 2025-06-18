@@ -51,6 +51,12 @@ Código mínimo para o App.jsx
 
   export default App;
 
+Adicionar os scripts de desenvolvimento e build ao package.json, trocando pelo que esta no package.json.
+"scripts": {
+  "start": "esbuild --bundle src/main.jsx --outfile=main.js --servedir=./ --watch",
+  "build": "esbuild --bundle src/main.jsx --outfile=main.js"
+},
+
 Comandos
 Inicia o desenvolvimento
 - npm run dev

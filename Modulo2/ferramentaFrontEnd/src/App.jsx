@@ -1,5 +1,4 @@
 import React from 'react';
-
 //Exercício:
 // Mostre os dados da aplicação, como aprensetado abaixo:
 
@@ -39,6 +38,7 @@ const mario = {
   ],
   ativa: false,
 };
+
 const App = () => {
   const nome = 'Origamid';
   const num = Math.random();
@@ -120,7 +120,6 @@ const App = () => {
         <p>Total: R$ {total}</p>
         <p>{total > 10000 && 'Você está gastando muito'}</p>
       </div>
-
       <br />
       <div>
         <p>Nome: {dadosLuana.cliente}</p>
@@ -131,12 +130,18 @@ const App = () => {
             {dadosLuana.ativa ? 'Ativa' : 'Inativa'}
           </span>
         </p>
-        <p>Total: R$ {dadosLuana.compras.map((item) => Number(item.preco.replace('R$ ', '')))
-    .reduce((a, b) => a + b)}</p>
-        <p>{dadosLuana.compras.map((item) => Number(item.preco.replace('R$ ', '')))
-    .reduce((a, b) => a + b) > 10000 && 'Você está gastando muito'}</p>
+        <p>
+          Total: R${' '}
+          {dadosLuana.compras
+            .map((item) => Number(item.preco.replace('R$ ', '')))
+            .reduce((a, b) => a + b)}
+        </p>
+        <p>
+          {dadosLuana.compras
+            .map((item) => Number(item.preco.replace('R$ ', '')))
+            .reduce((a, b) => a + b) > 10000 && 'Você está gastando muito'}
+        </p>
       </div>
-
       <br />
       <div>
         <p>Nome: {dadosMario.cliente}</p>
@@ -147,10 +152,17 @@ const App = () => {
             {dadosMario.ativa ? 'Ativa' : 'Inativa'}
           </span>
         </p>
-        <p>Total: R$ {dadosMario.compras.map((item) => Number(item.preco.replace('R$ ', '')))
-    .reduce((a, b) => a + b)}</p>
-        <p>{dadosMario.compras.map((item) => Number(item.preco.replace('R$ ', '')))
-    .reduce((a, b) => a + b) > 10000 && 'Você está gastando muito'}</p>
+        <p>
+          Total: R${' '}
+          {dadosMario.compras
+            .map((item) => Number(item.preco.replace('R$ ', '')))
+            .reduce((a, b) => a + b)}
+        </p>
+        <p>
+          {dadosMario.compras
+            .map((item) => Number(item.preco.replace('R$ ', '')))
+            .reduce((a, b) => a + b) > 10000 && 'Você está gastando muito'}
+        </p>
       </div>
     </>
   );
