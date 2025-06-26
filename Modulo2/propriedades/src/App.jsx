@@ -66,6 +66,9 @@ const App = () => {
       <div>
         <Form />
       </div>
+      <hr />
+      <h2>Dados</h2>
+      <p>Podemos passar diferentes tipos de dados e até outros componentes nas propriedades.</p>
     </>
   );
 };
