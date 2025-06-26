@@ -11,6 +11,8 @@ const App = () => {
   window.addEventListener('scroll', handleScroll);
   return (
     <>
+      <h1>Eventos</h1>
+      <p>Podemos atribuir eventos diretamente aos elementos JSX como um atributo. Os eventos são sintáticos, ou seja, são criados pelo próprio React porém seguindo as especificações da W3C (e funcionam igualmente nos diversos browsers que o React suporta).</p>
       <div>
         <button onClick={handleClick}/*evento do botão*/>Bermuda</button>
       </div>
